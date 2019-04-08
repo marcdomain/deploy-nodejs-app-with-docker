@@ -1,0 +1,46 @@
+@import "../../assets/sass/partials/colors";
+
+.navbar {
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.navbar .brand {
+  color: $color-danger;
+}
+
+.nav a {
+  color: $color-danger;
+  font-size: 1.6rem;
+}
+
+.nav .icon.material-icons, {
+  color: $color-danger;
+}
+
+.notif-bell {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.notif-count {
+  color: $color-danger;
+  padding-right: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.notif-bar {
+  background: $color-transparent-black;
+  color: $color-white;
+  padding: 0 10px;
+  position: absolute;
+}
+
+.display-none {
+  display: none;
+}

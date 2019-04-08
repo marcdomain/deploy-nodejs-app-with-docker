@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": "airbnb",
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "react/button-has-type": 0,
+    "react/no-did-mount-set-state": 0,
+    "require-jsdoc": [0, {
+      "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": false,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+      }
+    }],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }]
+  },
+  "root": true
+}

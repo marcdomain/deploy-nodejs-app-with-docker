@@ -1,0 +1,66 @@
+@import "../../assets/sass/partials/colors";
+
+.ha-card {
+    display: flex;
+    flex-basis: calc(50% - 80px);
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px darken($color-light-gray, 8%);
+    box-sizing: border-box;
+    height: 160px;
+    margin: 20px;
+    padding: 0;
+    
+    img {
+        width:35%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .ha-card-info {
+        flex: 1;
+        padding: 20px;
+        position: relative;
+
+        > *:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .ha-card-tag {
+        position: absolute;
+        bottom: 15px;
+
+        span {
+            color: $color-dark-gray;
+            text-transform: uppercase;
+            margin-right: 4px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    .ha-card-title {
+        font-size: 18px;
+        margin-top: 0;
+        width: 70%;
+
+        a {
+            color: $color-dark;
+        }
+    }
+
+    .ha-card-description {
+        margin: 8px 0;
+        width: 55%;
+        color: $color-dark-gray;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ha-card {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

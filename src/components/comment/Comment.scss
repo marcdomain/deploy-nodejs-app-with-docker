@@ -1,0 +1,55 @@
+@import "../../assets/sass/partials/colors";
+
+.comment {
+    display: flex;
+    padding: 15px 15px 15px 0;
+
+    .comment-author-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 8px;
+    }
+
+    .comment-detail {
+        border-bottom: 1px solid darken($color-light-gray, 30%);
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 10px;
+        padding-bottom: 25px;
+        position: relative;
+    }
+
+    .comment-author {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    .comment-date {
+        color: darken($color-light-gray, 35%);
+        margin-bottom: 8px;
+    }
+
+    button.comment-edit {
+        border-radius: 5px;
+        background-color: $color-white;
+        cursor: pointer;
+        padding: 4px 8px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:hover {
+            background-color: $color-light-gray;
+        }
+    }
+
+    .is-edited {
+        color: darken($color-light-gray, 30%);
+        font-size: 12px;
+    }
+}
