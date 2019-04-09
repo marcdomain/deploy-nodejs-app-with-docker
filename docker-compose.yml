@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - /usr/app/
+    ports:
+      - "3000:8080"
+    image: marcdomain/balder-ah-frontend

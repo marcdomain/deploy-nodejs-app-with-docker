@@ -1,7 +1,6 @@
 # Authors Haven - A Social platform for the creative at heart.
 
-[![Build Status](https://travis-ci.org/andela/balder-ah-frontend.svg?branch=staging)](https://travis-ci.org/andela/balder-ah-frontend)
-[![Coverage Status](https://coveralls.io/repos/github/andela/balder-ah-frontend/badge.svg?branch=staging)](https://coveralls.io/github/andela/balder-ah-frontend?branch=staging)
+[![Build Status](https://travis-ci.org/marcdomain/deploy-nodejs-app-with-docker.svg?branch=master)](https://travis-ci.org/marcdomain/deploy-nodejs-app-with-docker)
 
 ## Vision
 

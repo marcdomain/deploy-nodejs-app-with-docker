@@ -1,11 +1,25 @@
+sudo: required
 language: node_js
 node_js:
   - "stable"
 cache:
   directories:
     - node_modules
+services:
+  - docker
 install:
   - npm install
 script:
   - npm test
-  - npm run coveralls
+  # - npm run coveralls
+after_success:
+  - travis encrypt AWS_ACCESS_KEY_ID="${ACCESS_KEY_ID}" --add
+  - travis encrypt AWS_SECRET_ACCESS_KEY="${SECRET_ACCESS_KEY}" --add
+  - travis encrypt AWS_ACCOUNT_NUMBER="${AWS_ACCOUNT_NUMBER}" --add
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+  - eval $(aws ecr get-login --region us-east-2 --no-include-email)
+  - docker build -t marcdomain/balder-ah-frontend .
+  # - docker-compose build
+  - docker tag marcdomain/balder-ah-frontend:latest "${AWS_ACCOUNT_NUMBER}".dkr.ecr.us-east-2.amazonaws.com/balder-ah-frontend:latest
+  - docker push "${AWS_ACCOUNT_NUMBER}".dkr.ecr.us-east-2.amazonaws.com/balder-ah-frontend:latest
